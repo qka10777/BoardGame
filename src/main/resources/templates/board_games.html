@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Board Games List</title>
+</head>
+<body>
+<h1>Board Games List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Img</th>
+        <!-- Add more headers as needed -->
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Loop through board games and display their information -->
+    <tr th:each="boardGame : ${boardGames}">
+        <td th:text="${boardGame.title}"></td>
+        <td><img th:src="@{${boardGame.img}}" alt="Board Game Image"/></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
